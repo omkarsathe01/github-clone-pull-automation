@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Visit https://github.com/omkarsathe01/github-clone-pull-automation#automating-clone-and-pull-operations-for-user for any help!"
-
+perform_operations() {
 # Check if jq is installed
 if ! command -v jq &> /dev/null; then
   echo "Error: jq is required for this script. Please install jq (https://stedolan.github.io/jq/)"
@@ -54,3 +54,12 @@ echo
 echo "$total_count/$total_count done."
 echo "Thanks for using the script!"
 echo "Help us improve by sharing feedback at omkarsathe.pers@gmail.com"
+}
+
+if [ "$#" -eq 2 ]; then
+  perform_operations "$1" "$2"
+else
+  echo "Error: This script requires GitHub Username and GitHub Bearer Token as command-line arguments."
+  echo "Example: curl -fsSL https://raw.githubusercontent.com/omkarsathe01/github-clone-pull-automation/main/script.sh | bash -s <GitHub_Username> <GitHub_Bearer_Token>"
+  exit 1
+fi
