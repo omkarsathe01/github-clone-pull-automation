@@ -8,6 +8,7 @@ if ! command -v jq &> /dev/null; then
   exit 1
 fi
 
+echo
 read -p "📝 Enter Your GitHub Username: " USER_NAME
 read -sp "🔑 Enter Your GitHub Bearer Token: " GITHUB_TOKEN
 echo 
