@@ -25,7 +25,7 @@ Make sure you have GitHub Account and have the Personal access token with read p
 To automate the process, you can run the following command in your terminal. This command retrieves the script directly from the GitHub repository and executes it.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/omkarsathe01/github-clone-pull-automation/main/script.sh | bash
+bash <( curl -s -fsSL https://raw.githubusercontent.com/omkarsathe01/github-clone-pull-automation/main/script.sh)
 ```
 
 Note: Running scripts directly from the internet can pose security risks. Ensure that you trust the source before executing the command.
